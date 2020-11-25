@@ -161,3 +161,12 @@
   console.log(y); //[1,2]
 
 }
+
+//変数の挙動を理解しよう
+{
+let x = [1, 2];
+let y = [...x];
+x[0] = 5;
+console.log(x); //[5,2]
+console.log(y); //[1,2]
+}
