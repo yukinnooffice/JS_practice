@@ -126,3 +126,22 @@
   console.log(othrers);
 }
 
+//object.keys()を使ってみよう
+{
+    const point = {
+    x:100,
+    y: 180,
+  };
+
+  // const keys = Object.keys(point);
+  // keys.forEach(key => {
+  //   console.log(`key: ${key} Value: ${point[key]}`);   
+  // });
+
+  const points = [
+    {x: 30, y: 20},
+    {x: 50, y: 70},
+    {x: 90, y: 90},
+  ];
+  console.log(points[1.].y);
+}
