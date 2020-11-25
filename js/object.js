@@ -170,3 +170,15 @@ x[0] = 5;
 console.log(x); //[5,2]
 console.log(y); //[1,2]
 }
+
+//文字列を操作してみよう
+{
+  const str = 'hello';
+
+  console.log(str.length)
+
+  // str.substring(開始位置,終了位置)
+  console.log(str.substring(2, 4));
+
+  console.log(str[1]);
+}
