@@ -276,16 +276,33 @@ console.log(y); //[1,2]
 // }
 
 //25 setTimeout()を使ってみよう
-{
-  let i = 0;
-  function showTime() {
-  console.log(new Date());
-  const timeoutId = setTimeout(showTime, 1000);
-  i++
-  if (i > 2){
-    clearTimeout(timeoutId);
-  }
-  }
+// {
+//   let i = 0;
+//   function showTime() {
+//   console.log(new Date());
+//   const timeoutId = setTimeout(showTime, 1000);
+//   i++
+//   if (i > 2){
+//     clearTimeout(timeoutId);
+//   }
+//   }
 
-  showTime();
+//   showTime();
+// }
+
+//26 タイマー処理の違いを理解しよう 
+//setIntervalは処理が重なっていても処理が実行され続け、システムに負荷がかかる
+//setTimeoutは処理が重なって実行される事がないので、システムに負荷がかからない
+
+//27 例外処理を使ってみよう
+{
+  const name = 3;
+
+  try {
+  console.log(name.toUpperCase());
+  } catch(e) {
+  console.log(e);
+  }
+  console.log('finish')
+
 }
