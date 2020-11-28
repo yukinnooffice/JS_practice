@@ -249,3 +249,14 @@ console.log(y); //[1,2]
   d.setDate(d.getDate() + 3);
   console.log(d);
 }
+
+//23 alert()､confirm()を使ってみよう
+{
+  // alert('hello');
+  const answer = confirm('削除しますか？');
+  if (answer) {
+    console.log('削除しました');
+  } else{
+    console.log('キャンセルしました')
+  }
+}
