@@ -251,12 +251,26 @@ console.log(y); //[1,2]
 }
 
 //23 alert()､confirm()を使ってみよう
-{
   // alert('hello');
-  const answer = confirm('削除しますか？');
-  if (answer) {
-    console.log('削除しました');
-  } else{
-    console.log('キャンセルしました')
+//   const answer = confirm('削除しますか？');
+//   if (answer) {
+//     console.log('削除しました');
+//   } else{
+//     console.log('キャンセルしました')
+//   }
+// }
+//24 setInterval()を使ってみよう 
+
+{
+  let i = 0;
+
+  function showTime() {
+    console.log(new Date());
+    i++;
+    if (i > 2) {
+      clearInterval(intervalId);
+    }
   }
+
+  const intervalId = setInterval(showTime, 1000);
 }
