@@ -346,6 +346,7 @@ console.log(y); //[1,2]
 
 // 31 クラスを作ってみよう
 //32 カプセル化を理解しよう
+// 33 静的メソッドを使ってみよう 
 {
   class Post {
     constructor(text) {
@@ -360,11 +361,16 @@ console.log(y); //[1,2]
       this.likeCount++;
       this.show();
     }
+    //静的メソッド
+      static showInfo() {
+        console.log('Post class version 1.0');
+      }
+    }
   }
 
+
   const posts = [
-    new Post('JavaScriptの勉強中…'),
-    new Post('プログラミング楽しい！'),
+    
   ];
 
   posts[0].like();
