@@ -233,3 +233,11 @@ console.log(y); //[1,2]
     console.log(Math.floor(Math.random() * 6) + 1);
   }
   
+// 21 現在日時を扱ってみよう 
+
+{
+  const d = new Date();
+  console.log(d);
+  console.log(`${d.getMonth() + 1} 月 ${d.getDate()} 日`)
+  
+}
