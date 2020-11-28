@@ -197,3 +197,25 @@ console.log(y); //[1,2]
   console.log(minute)
   console.log(second)
 }
+
+// #19 数値を操作してみよう 
+{
+  const scores = [10, 3, 9];
+ 
+  let sum = 0;
+
+  scores.forEach(score => {
+    sum += score;
+  });
+
+  const avg = sum / scores.length;
+  // console.log(sum);
+  // console.log(avg);
+
+  console.log(Math.floor(sum));
+  console.log(Math.ceil(sum));
+  console.log(Math.round(sum));
+  console.log(avg.toFixed(3));
+
+  console.log(Math.random());
+}
