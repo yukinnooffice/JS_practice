@@ -347,33 +347,43 @@ console.log(y); //[1,2]
 // 31 クラスを作ってみよう
 //32 カプセル化を理解しよう
 // 33 静的メソッドを使ってみよう 
-{
-  class Post {
-    constructor(text) {
-      this.text = text;
-      this.likeCount = 0;
-    }
-
-    show() {
-      console.log(`${this.text} - ${this.likeCount} likes`);
-    }
-    like() {
-      this.likeCount++;
-      this.show();
-    }
-    //静的メソッド
-      static showInfo() {
-        console.log('Post class version 1.0');
+//34 クラスを拡張したい場合を考えよう
+// 35 クラスを継承してみよう
+  {
+    class Post { // 親クラス
+      constructor(text) {
+        this.text = text;
+        this.likeCount = 0;
+      }
+  
+      show() {
+        console.log(`${this.text} - ${this.likeCount} likes`);
+      }
+  
+      like() {
+        this.likeCount++;
+        this.show();
       }
     }
-  }
-
-
-  const posts = [
-    
-  ];
-
-  posts[0].like();
-  // posts[0].show();
-  // posts[1].show();
+  
+    class SponsoredPost extends Post { // 子クラス
+      constructor(text, sponsor) {
+        super(text);
+        this.sponsor = sponsor;
+      }
+  
+      show() {
+        super.show();
+        console.log(`... sponsored by ${this.sponsor}`);
+      }
+    }
+  
+    const posts = [
+      new Post('JavaScriptの勉強中…'),
+      new Post('プログラミング楽しい！'),
+      new SponsoredPost('3分動画でマスターしよう', 'dotinstall'),
+    ];
+  
+    posts[2].show();
+    posts[2].like();
 }
