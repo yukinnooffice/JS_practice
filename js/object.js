@@ -309,31 +309,31 @@ console.log(y); //[1,2]
 //28 オブジェクトが複数ある場合を考えよう
 //29 メソッドを使ってみよう
 
-{
-  const posts = [
-    {
-      text: 'JavaScriptの勉強中…',
-      likeCount: 0,
-      // show: function () {
-      //   console.log(`${this.text} - ${this.likeCount}いいね`);
-      // }
-      show() {
-        console.log(`${this.text} - ${this.likeCount}いいね`);
-      },
-    },
-    {
-      text: 'プログラミング楽しい！',
-      likeCount: 0,
-      show() {
-        console.log(`${this.text} - ${this.likeCount}いいね`);
-      },
-    },
-  ];
+// {
+//   const posts = [
+//     {
+//       text: 'JavaScriptの勉強中…',
+//       likeCount: 0,
+//       // show: function () {
+//       //   console.log(`${this.text} - ${this.likeCount}いいね`);
+//       // }
+//       show() {
+//         console.log(`${this.text} - ${this.likeCount}いいね`);
+//       },
+//     },
+//     {
+//       text: 'プログラミング楽しい！',
+//       likeCount: 0,
+//       show() {
+//         console.log(`${this.text} - ${this.likeCount}いいね`);
+//       },
+//     },
+//   ];
 
-  // show(posts[0]);
-  posts[0].show();
-  posts[1].show();
-}
+//   // show(posts[0]);
+//   posts[0].show();
+//   posts[1].show();
+// }
 //30 クラスの概念を理解しよう
 // オブジェクトのテンプレートを作るための仕組みである、クラスの概念を見ていきます。
 
@@ -345,3 +345,23 @@ console.log(y); //[1,2]
 // new
 
 // 31 クラスを作ってみよう
+{
+  class Post {
+    constructor(text) {
+      this.text = text;
+      this.likeCount = 0;
+    }
+
+    show() {
+      console.log(`${this.text} - ${this.likeCount}いいね`);
+    }
+  }
+
+  const posts = [
+    new Post('JavaScriptの勉強中…'),
+    new Post('プログラミング楽しい！'),
+  ];
+
+  posts[0].show();
+  posts[1].show();
+}
