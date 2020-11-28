@@ -345,6 +345,7 @@ console.log(y); //[1,2]
 // new
 
 // 31 クラスを作ってみよう
+//32 カプセル化を理解しよう
 {
   class Post {
     constructor(text) {
@@ -353,7 +354,11 @@ console.log(y); //[1,2]
     }
 
     show() {
-      console.log(`${this.text} - ${this.likeCount}いいね`);
+      console.log(`${this.text} - ${this.likeCount} likes`);
+    }
+    like() {
+      this.likeCount++;
+      this.show();
     }
   }
 
@@ -362,6 +367,7 @@ console.log(y); //[1,2]
     new Post('プログラミング楽しい！'),
   ];
 
-  posts[0].show();
-  posts[1].show();
+  posts[0].like();
+  // posts[0].show();
+  // posts[1].show();
 }
