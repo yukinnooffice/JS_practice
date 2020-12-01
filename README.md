@@ -1,2 +1,2 @@
 # JS_practice
-ドットインストールJavaScript学習11/5~開始！⭐️
+ドットインストール　JavaScript学習11/5~開始！⭐️
